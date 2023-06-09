@@ -3,7 +3,7 @@ A Python text based game with basic AI
 
 ___EARLY_BETA VERSION_ This game is currently in development and is not yet complete.____
 Dragon Battle is a text-based game where the player can explore multiple locations and fight various enemies.
-Enemies have a basic AI system and enemies encountered enemies have randomised stats in attack, health and agility. I will be adding more features on the enemy AI such as enemy decision making capabilities based on the enemies confidence, anger and fear.
+Enemies have a basic AI system and encountered enemies have randomised stats in attack, health and agility. I will be adding more features on the enemy AI such as enemy decision making capabilities based on the enemies confidence, anger and fear.
 
 The script has been developed so other users can add in new locations or features.  If you want to do this, read the readme file located within version directory.
 
