@@ -1,3 +1,5 @@
+HI, Im new to GitHub and I am learning how this website works. 
+
 # DragonBattle
 A Python text based game with basic AI
 
