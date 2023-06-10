@@ -1,5 +1,14 @@
-Welcome to Shane Curries Dragon Battle game.
-Version 1.7 released 9/06/23
+<h2Welcome to Shane Curries Dragon Battle game.</h2>
+
+Version 1.8 released 10/06/23
+
+---------
+-recent changes-
+
+-adding subdirectories to simplify game code structure
+-edited modules to support new subdirectories 
+
+
 -------
 -how to start game-
 Run the game.py file
