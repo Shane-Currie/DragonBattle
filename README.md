@@ -1,7 +1,9 @@
 HI, Im new to GitHub and I am learning how this website works. 
 
 # DragonBattle
-A Python text based game with basic AI /n
+
+A Python text based game with basic AI.
+
 Video Game, Video updates: https://shanesonline.com/professional/Dragon_battle.html
 
 ___EARLY_BETA VERSION_ This game is currently in development and is not yet complete.____
