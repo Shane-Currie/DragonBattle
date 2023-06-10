@@ -1,8 +1,8 @@
 HI, Im new to GitHub and I am learning how this website works. 
 
 # DragonBattle
-A Python text based game with basic AI
- Video Game, Video updates: https://shanesonline.com/professional/Dragon_battle.html
+A Python text based game with basic AI /n
+Video Game, Video updates: https://shanesonline.com/professional/Dragon_battle.html
 
 ___EARLY_BETA VERSION_ This game is currently in development and is not yet complete.____
 Dragon Battle is a text-based game where the player can explore multiple locations and fight various enemies.
