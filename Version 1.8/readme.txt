@@ -2,6 +2,8 @@
 
 Version 1.8 released 10/06/23
 
+Edited by Shane Currie
+
 ---------
 -recent changes-
 
