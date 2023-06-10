@@ -7,7 +7,7 @@ Version 1.8 released 10/06/23
 
 -adding subdirectories to simplify game code structure
 -edited modules to support new subdirectories 
-
+-Included comments in fight.py, angry_cat.py and dragon.py regarding changes to be made to enemy AI system
 
 -------
 -how to start game-
