@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dragon Fight</title>
+</head>
+<body>
+  <h1>Dragon Fight</h1>
+  <textarea id="output" rows="10" cols="50" readonly></textarea>
+  <br>
+  <button id="start">Start Game</button>
+  <button id="fight" disabled>Fight</button>
+  <button id="flee" disabled>Flee</button>
+  <script src="game.js"></script>
+</body>
+<script>
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+class Character {
+    constructor(name, health, damage) {
+        this.name = name;
+        this.health = health;
+        this.damage = damage;
+    }
+    
+    attack(target) {
+        let attackValue = getRandom(0, this.damage);
+        appendToOutput(`${this.name} attacks ${target.name} for ${attackValue} damage.`);
+        target.health -= attackValue;
+        appendToOutput(`${target.name}'s health is now ${target.health}`);
+    }
+    
+    isAlive() {
+        return this.health > 0;
+    }
+}
+
+class Player extends Character {
+    constructor() {
+        super("Player", 100, 10);
+    }
+}
+
+class Dragon extends Character {
+    constructor() {
+        super("Dragon", 200, 20);
+    }
+    
+    rollDice() {
+        let roll = getRandom(1, 6);
+        appendToOutput(`Dragon rolls a dice and gets a ${roll}`);
+        return roll;
+    }
+}
+
+let player = new Player();
+let dragon = new Dragon();
+let gameStarted = false;
+
+function game() {
+    let dragonAction = dragon.rollDice();
+    if(dragonAction <= 4 && dragon.isAlive()) {
+        dragon.attack(player);
+    } else {
+        appendToOutput("Dragon decided not to attack this turn.");
+    }
+    
+    if(!player.isAlive()) {
+        appendToOutput("Dragon has defeated the player! Game Over.");
+        endGame();
+    }
+    
+    if(!dragon.isAlive()) {
+        appendToOutput("Player has defeated the dragon! Game Over.");
+        endGame();
+    }
+}
+
+function startGame() {
+    gameStarted = true;
+    document.getElementById('start').disabled = true;
+    document.getElementById('fight').disabled = false;
+    document.getElementById('flee').disabled = false;
+    appendToOutput("Game Started!");
+}
+
+function endGame() {
+    gameStarted = false;
+    document.getElementById('start').disabled = false;
+    document.getElementById('fight').disabled = true;
+    document.getElementById('flee').disabled = true;
+}
+
+function appendToOutput(message) {
+    document.getElementById('output').value += message + '\n';
+}
+
+document.getElementById('start').addEventListener('click', startGame);
+document.getElementById('fight').addEventListener('click', function() {
+    if(gameStarted && player.isAlive() && dragon.isAlive()) {
+        player.attack(dragon);
+        game();
+    }
+});
+document.getElementById('flee').addEventListener('click', function() {
+    if(gameStarted) {
+        appendToOutput("You fled from the dragon. Game Over.");
+        endGame();
+    }
+});
+
+</script>
+</html>
